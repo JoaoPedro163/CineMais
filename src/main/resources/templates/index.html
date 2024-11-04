@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Cinemais - Cadastre,avalie e se divirta</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+    </head>
+
+    <body>
+        <header style="width: 100%; background-color: #595551;">
+            <div class="row">
+                <div class="col-sm-8" style=" padding-left: 2%">
+                    <img th:src="@{/images/logo.png}" style="width: 81px; height: 69px;"/>
+                </div>
+                <div class="col-sm-4" style="margin: auto;">
+                    <nav class="d-flex" style="color:white;">
+                        <a style="text-decoration: none; color: white;">Página Inicial</a>
+                        <a class="ms-5" style="text-decoration: none; color: white;">Cadastrar</a>
+                        <a class="ms-5" style="text-decoration: none; color:white;">Avaliar</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <article style="width: 100%;">   
+            <img th:src="@{/images/banner.png}" style="width: 100%"/>
+        </article>
+        <main>
+            <article>
+                <div class="container">
+                    <h1 style="text-align: center;">CADASTRE SEUS FILMES FAVORITOS</h1>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p style="text-align: left;">Cadastre os seus filmes favoritos para que outras pessoas
+                                possam vê-lo e avalia-lo!</p>
+
+                            <div class="row">
+                                <a class="btn btn-primary" style="border-radius:40px">Cadastrar</a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <img th:src="@{/images/imagemCadastrar.jpeg}"/>
+                        </div>
+                    </div>
+                </div>
+                <hr style="width:80%; margin: auto; margin-top: 2%;"/>
+            </article>
+            <article>
+                <div class="container">
+                    <h1 style="text-align: center;">AVALIE FILMES JÁ CADASTRADOS</h1>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <img th:src="@{/images/imagemAvaliar.jpeg}"/>
+                        </div>
+                        <div class="col-sm-6">
+                            <p style="text-align: right;">Avalie filmes já cadastrados e coloque os melhores filmes no topo! E de quebra aumente seu repertório de filmes </p>
+
+                            <div class="row">
+                                <a class="btn btn-primary" style="border-radius:40px">Avaliar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer style="background-color: #595551;">
+            <div class="container">
+                <div class="col-sm-6">
+                    <nav class="d-flex flex-column">
+                        <a>Página Inicial</a>
+                        <a>Cadastrar</a>
+                        <a>Avaliar</a>
+                    </nav>
+                    <p style="color:white;"><strong>Copyright Cine+ - 2024 - Todos os direitos reservados</strong></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
