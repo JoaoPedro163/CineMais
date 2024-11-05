@@ -6,75 +6,95 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/css/styleIndex.css}"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Mako&display=swap" rel="stylesheet"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mako&display=swap" rel="stylesheet" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mako&display=swap" rel="stylesheet"/>
+
     </head>
 
     <body>
-        <header style="width: 100%; background-color: #595551;">
+        <header id="cabecalho">
             <div class="row">
-                <div class="col-sm-8" style=" padding-left: 2%">
-                    <img th:src="@{/images/logo.png}" style="width: 81px; height: 69px;"/>
+                <div class="col-sm-8" id="divLogo">
+                    <img th:src="@{/images/logo.png}" id="logo"/>
                 </div>
-                <div class="col-sm-4" style="margin: auto;">
-                    <nav class="d-flex" style="color:white;">
-                        <a style="text-decoration: none; color: white;">Página Inicial</a>
-                        <a class="ms-5" style="text-decoration: none; color: white;">Cadastrar</a>
-                        <a class="ms-5" style="text-decoration: none; color:white;">Avaliar</a>
+                <div class="col-sm-4" id="divNavCabecalho">
+                    <nav class="d-flex" id="navCabecalho">
+                        <a id="navPaginaInicial">Página Inicial</a>
+                        <a class="ms-5" style="">Cadastrar</a>
+                        <a class="ms-5">Avaliar</a>
                     </nav>
                 </div>
             </div>
         </header>
 
-        <article style="width: 100%;">   
-            <img th:src="@{/images/banner.png}" style="width: 100%"/>
+        <article id="articleBanner">   
+            <img th:src="@{/images/banner.png}" id="banner"/>
         </article>
         <main>
             <article>
                 <div class="container">
-                    <h1 style="text-align: center;">CADASTRE SEUS FILMES FAVORITOS</h1>
+                    <h1 class="title">CADASTRE SEUS FILMES FAVORITOS</h1>
 
                     <div class="row">
                         <div class="col-sm-6">
-                            <p style="text-align: left;">Cadastre os seus filmes favoritos para que outras pessoas
+                            <p id="paragrafoCadastrar">Cadastre os seus filmes favoritos para que outras pessoas
                                 possam vê-lo e avalia-lo!</p>
 
-                            <div class="row">
-                                <a class="btn btn-primary" style="border-radius:40px">Cadastrar</a>
+                            <div class="row" id="rowBtnCadastrar">
+                                <a class="btn btn-primary" id="btnCadastrar"><strong>Cadastrar</strong></a>
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <img th:src="@{/images/imagemCadastrar.jpeg}"/>
+                            <img th:src="@{/images/imagemCadastrar.jpeg}" id="imagemCadastrar"/>
                         </div>
                     </div>
                 </div>
-                <hr style="width:80%; margin: auto; margin-top: 2%;"/>
+                <hr id="hrDivisoria"/>
             </article>
             <article>
                 <div class="container">
-                    <h1 style="text-align: center;">AVALIE FILMES JÁ CADASTRADOS</h1>
+                    <h1 class="title">AVALIE FILMES JÁ CADASTRADOS</h1>
                     <div class="row">
                         <div class="col-sm-6">
-                            <img th:src="@{/images/imagemAvaliar.jpeg}"/>
+                            <img th:src="@{/images/imagemAvaliar.jpeg}" id="imagemAvaliar"/>
                         </div>
                         <div class="col-sm-6">
-                            <p style="text-align: right;">Avalie filmes já cadastrados e coloque os melhores filmes no topo! E de quebra aumente seu repertório de filmes </p>
+                            <p id="paragrafoAvaliar">Avalie filmes já cadastrados e coloque os melhores filmes no topo! E de quebra aumente seu repertório de filmes </p>
 
-                            <div class="row">
-                                <a class="btn btn-primary" style="border-radius:40px">Avaliar</a>
+                            <div class="row" id="rowBtnAvaliar">
+                                <a class="btn btn-primary" id="btnAvaliar"><strong>Avaliar</strong></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </article>
         </main>
-        <footer style="background-color: #595551;">
+        <footer id="rodape">
             <div class="container">
-                <div class="col-sm-6">
-                    <nav class="d-flex flex-column">
-                        <a>Página Inicial</a>
-                        <a>Cadastrar</a>
-                        <a>Avaliar</a>
-                    </nav>
-                    <p style="color:white;"><strong>Copyright Cine+ - 2024 - Todos os direitos reservados</strong></p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <nav class="d-flex flex-column" id="navRodape">
+                            <a>Página Inicial</a>
+                            <a>Cadastrar</a>
+                            <a>Avaliar</a>
+                        </nav>
+                        <p style="color:white;"><strong>Copyright Cine+ - 2024 - Todos os direitos reservados</strong></p>
+                    </div>
+                    <div class="col-sm-6" id="divContatos">
+                        <p>Contato: 00 00000-0000</p>
+                        <p><strong>Redes sociais: <img th:src="@{/images/facebook.jpeg}" alt="logo-facebook" class="redesSociais"/> <img th:src="@{/images/instagram.jpeg}" alt="logo-instagram" class="redesSociais"/></strong></p>
+                    </div>
                 </div>
             </div>
         </footer>

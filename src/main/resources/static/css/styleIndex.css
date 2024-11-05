@@ -1,0 +1,143 @@
+#cabecalho{
+    background-color: #595551;
+}
+
+#divLogo{
+    padding-left: 2%;
+}
+
+#logo{
+    width: 81px;
+    height: 69px
+}
+
+#divNavCabecalho{
+    margin: auto;
+}
+
+#navCabecalho{
+    color:white;
+    justify-content: center;
+}
+
+#navPaginaInicial{
+    text-decoration: none;
+    color: white;
+}
+
+.ms-5{
+    text-decoration: none;
+    color: white;
+}
+
+#articleBanner{
+    width: 100%;
+}
+
+#banner{
+    width: 100%;
+}
+
+.title{
+    text-align: center;
+    margin-top: 5%;
+    font-family: 'ADLaM Display','sans-serif';
+}
+
+#paragrafoCadastrar{
+    text-align: left;
+    font-family: 'mako', 'sans-serif';
+    font-size: 36px;
+}
+
+#imagemCadastrar{
+    width: 100%;
+}
+
+#imagemAvaliar{
+    width: 100%;
+}
+
+#btnCadastrar{
+    border-radius:40px;
+    width: 50%;
+    background-color: #00A8E1;
+    color: #FFBD59;
+    border:none;
+    height: 52px;
+    font-family: 'inter', 'sans-serif';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rowBtnCadastrar{
+    justify-content: center;
+}
+
+#hrDivisoria{
+    width:80%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+#paragrafoAvaliar{
+    text-align: right;
+    font-family: 'mako', 'sans-serif';
+    font-size: 36px;
+}
+
+#btnAvaliar{
+    border-radius:40px;
+    width: 50%;
+    background-color: #00A8E1;
+    color: #FFBD59;
+    border:none;
+    height: 52px;
+    font-family: 'inter', 'sans-serif';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rowBtnAvaliar{
+    justify-content: center;
+}
+
+#rodape{
+    background-color: #595551;
+    margin-top: 5%;
+}
+
+#navRodape{
+    margin-top:2%;
+    color:white;
+}
+
+#divContatos{
+    text-align: center;
+    margin-top: 2%;
+    color: white;
+}
+
+.redesSociais{
+    width: 29px;
+    height: 27px;
+}
+
+@media screen and (max-width: 768px){
+    #paragrafoCadastrar{
+        text-align: center;
+        font-family: 'mako', 'sans-serif';
+        font-size: 36px;
+    }
+
+    #paragrafoAvaliar{
+        text-align: center;
+        font-family: 'mako', 'sans-serif';
+        font-size: 36px;
+    }
+    #divLogo{
+        text-align: center;
+    }
+}
