@@ -2,9 +2,6 @@
     background-color: #595551;
 }
 
-#divLogo{
-    padding-left: 2%;
-}
 
 #logo{
     width: 81px;
@@ -139,5 +136,13 @@
     }
     #divLogo{
         text-align: center;
+    }
+    
+    #btnCadastrar{
+        margin-bottom: 2%;
+    }
+    
+    #btnAvaliar{
+        margin-bottom: 2%;
     }
 }
