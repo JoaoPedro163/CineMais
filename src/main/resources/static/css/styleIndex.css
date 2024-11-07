@@ -2,7 +2,6 @@
     background-color: #595551;
 }
 
-
 #logo{
     width: 81px;
     height: 69px
@@ -45,14 +44,15 @@
     text-align: left;
     font-family: 'mako', 'sans-serif';
     font-size: 36px;
+    margin-top:8%;
 }
 
-#imagemCadastrar{
-    width: 100%;
+#rowCadastrar{
+    margin-top:4%;
 }
 
-#imagemAvaliar{
-    width: 100%;
+#rowAvaliar{
+    margin-top:4%;
 }
 
 #btnCadastrar{
@@ -68,8 +68,17 @@
     justify-content: center;
 }
 
+#titleAvaliar{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    margin-top: 4%;
+}
+
 #rowBtnCadastrar{
     justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
 }
 
 #hrDivisoria{
@@ -99,6 +108,8 @@
 
 #rowBtnAvaliar{
     justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
 }
 
 #rodape{
@@ -137,12 +148,56 @@
     #divLogo{
         text-align: center;
     }
-    
+
     #btnCadastrar{
         margin-bottom: 2%;
     }
-    
+
     #btnAvaliar{
         margin-bottom: 2%;
+    }
+}
+
+@media screen and (min-width: 998px){
+    #containerAvaliar{
+        background-color: #595551;
+        border-radius: 40px;
+        color: white;
+        padding:0px;
+    }
+
+    #containerCadastrar{
+        background-color: #595551;
+        border-radius: 40px;
+        color: white;
+        padding:0px;
+    }
+
+    #imagemAvaliar{
+        width: 100%;
+        height: 100%;
+        border-radius: 40px 0px 0px 40px;
+    }
+
+    #imagemCadastrar{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 40px 40px 0px;
+    }
+
+    #paragrafoCadastrar{
+        text-align: left;
+        font-family: 'mako', 'sans-serif';
+        font-size: 36px;
+        margin-top:8%;
+        margin-left: 8%;
+    }
+    
+    #paragrafoAvaliar{
+        text-align: right;
+        font-family: 'mako', 'sans-serif';
+        font-size: 36px;
+        margin-top:8%;
+        margin-right:8%;
     }
 }

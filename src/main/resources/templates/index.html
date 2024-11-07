@@ -12,63 +12,50 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 
-        <!-- Carregar as fontes desejadas -->
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mako&family=ADLaM+Display&display=swap" rel="stylesheet"/>
 
     </head>
 
     <body>
-        <header id="cabecalho">
-            <div class="row">
-                <div class="col-sm-6" id="divLogo">
-                    <img th:src="@{/images/logo.png}" id="logo"/>
-                </div>
-                <div class="col-sm-4" id="divNavCabecalho">
-                    <nav class="d-flex" id="navCabecalho">
-                        <a id="navPaginaInicial">Página Inicial</a>
-                        <a class="ms-5" style="">Cadastrar</a>
-                        <a class="ms-5">Avaliar</a>
-                    </nav>
-                </div>
-            </div>
-        </header>
+        <header th:insert="cabecalho.html"></header>
 
         <article id="articleBanner">   
-            <img th:src="@{/images/banner.png}" id="banner"/>
+            <a th:href="@{/cadastrar}">
+                <img th:src="@{/images/banner.png}" id="banner"/>
+            </a>
         </article>
         <main>
             <article>
-                <div class="container">
-                    <h1 class="title">CADASTRE SEUS FILMES FAVORITOS</h1>
+                <div class="container" id="containerCadastrar">
 
-                    <div class="row">
+                    <div class="row" id="rowCadastrar">
                         <div class="col-sm-6">
+                            <h1 class="title">CADASTRE SEUS FILMES FAVORITOS</h1>
                             <p id="paragrafoCadastrar">Cadastre os seus filmes favoritos para que outras pessoas
                                 possam vê-lo e avalia-lo!</p>
 
                             <div class="row" id="rowBtnCadastrar">
-                                <a class="btn btn-primary" id="btnCadastrar"><strong>Cadastrar</strong></a>
+                                <a class="btn btn-primary" id="btnCadastrar" th:href="@{/cadastrar}"><strong>Cadastrar</strong></a>
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <img th:src="@{/images/imagemCadastrar.jpeg}" id="imagemCadastrar"/>
+                            <img th:src="@{/images/imagemCadastrar.jpeg}" id="imagemCadastrar" th:href="@{/cadastrar}"/>
                         </div>
                     </div>
                 </div>
-                <hr id="hrDivisoria"/>
             </article>
             <article>
-                <div class="container">
-                    <h1 class="title">AVALIE FILMES JÁ CADASTRADOS</h1>
-                    <div class="row">
+                <div class="container" id="containerAvaliar">
+                    <div class="row" id="rowAvaliar">
                         <div class="col-sm-6">
                             <img th:src="@{/images/imagemAvaliar.jpeg}" id="imagemAvaliar"/>
                         </div>
                         <div class="col-sm-6">
+                            <h1 class="title" id="titleAvaliar">AVALIE FILMES JÁ CADASTRADOS</h1>
                             <p id="paragrafoAvaliar">Avalie filmes já cadastrados e coloque os melhores filmes no topo! E de quebra aumente seu repertório de filmes </p>
 
                             <div class="row" id="rowBtnAvaliar">
-                                <a class="btn btn-primary" id="btnAvaliar"><strong>Avaliar</strong></a>
+                                <a class="btn btn-primary" id="btnAvaliar" th:href="@{/avaliar}"><strong>Avaliar</strong></a>
                             </div>
                         </div>
                     </div>

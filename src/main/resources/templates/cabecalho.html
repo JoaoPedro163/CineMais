@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/css/styleIndex.css}"/>
+    </head>
+    <body>
+        <header id="cabecalho">
+            <div class="row">
+                <div class="col-sm-6" id="divLogo">
+                    <img th:src="@{/images/logo.png}" id="logo"/>
+                </div>
+                <div class="col-sm-4" id="divNavCabecalho">
+                    <nav class="d-flex" id="navCabecalho">
+                        <a id="navPaginaInicial" th:href="@{/index}">Página Inicial</a>
+                        <a class="ms-5" th:href="@{/cadastrar}">Cadastrar</a>
+                        <a class="ms-5"th:href="@{/avaliar}">Avaliar</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>

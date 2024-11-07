@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Cinemais - Cadastrar filme</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/css/styleCadastrar.css}"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mako&family=ADLaM+Display&display=swap" rel="stylesheet"/>
+    </head>
+    <body>
+        <header th:insert="cabecalho.html"></header>
+
+        <main>
+            <div class="container" id="containerMain">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h3 id="title"><strong>CADASTRE SEU FILME FAVORITO PARA QUE OUTRAS PESSOAS POSSAM VÊ-LO</strong></h3>
+                        <form th:action="@{/cadastrar}" method="post">
+
+                            <label for="txtId" class="form-label">ID:</label>
+                            <input type="number" id="txtId" class="form-control" th:field="${filme.id}"/>
+
+                            <label for="txtTitulo" class="form-label">Titulo:</label>
+                            <input type="text" id="txtTitulo" th:field="${filme.titulo}" class="form-control"/>
+
+                            <label for="txtSinopse" class="form-label">Sinopse:</label>
+                            <input type="text" th:field="${filme.sinopse}" class="form-control" id="txtSinopse"/>
+
+                            <label for="txtGenero" class="form-label">Gênero:</label>
+                            <input type="text" th:field="${filme.genero}" class="form-control" id="txtGenero"/>
+
+                            <label for="txtAnoLancamento" class="form-label">Ano de lançamento:</label>
+                            <input type="date" th:field="${filme.anoLancamento}" class="form-control" id="txtAnoLancamento"/>
+
+                            <input type="submit" value="Cadastrar" class="btn btn-primary" id="btnCadastrar"/>
+                        </form>
+                    </div>
+                    <div class="col-sm-6">
+                        <img th:src="@{/images/imagemFormulario.jpeg}" alt="alt" id="imagemFormulario"/>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer th:insert="rodape.html"></footer>
+    </body>
+</html>

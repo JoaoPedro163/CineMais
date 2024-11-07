@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="htpp://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/css/styleIndex.css}"/>
+    </head>
+    <body>
+        <footer id="rodape">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <nav class="d-flex flex-column" id="navRodape">
+                            <a>Página Inicial</a>
+                            <a>Cadastrar</a>
+                            <a>Avaliar</a>
+                        </nav>
+                        <p style="color:white;"><strong>Copyright Cine+ - 2024 - Todos os direitos reservados</strong></p>
+                    </div>
+                    <div class="col-sm-6" id="divContatos">
+                        <p>Contato: 00 00000-0000</p>
+                        <p><strong>Redes sociais: <img th:src="@{/images/facebook.jpeg}" alt="logo-facebook" class="redesSociais"/> <img th:src="@{/images/instagram.jpeg}" alt="logo-instagram" class="redesSociais"/></strong></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

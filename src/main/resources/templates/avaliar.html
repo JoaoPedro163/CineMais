@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/css/styleAvaliar.css}"/>
+    </head>
+    <body>
+        <header th:insert="cabecalho.html"></header>
+        <main>
+            <div class="container">
+                <h3>VEJA O QUE NOSSOS USUÁRIOS ANDAM ASSISTINDO E AVALIE!</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>Gênero</th>
+                            <th>Sinopse</th>
+                            <th>Ano de lançamento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--Filmes cadastrados -->
+                        <tr th:each="filme : ${listaFilmes}">
+                            <td th:text="${filme.id}"/>
+                            <td th:text="${filme.titulo}"/>
+                            <td th:text="${filme.genero}"/>
+                            <td th:text="${filme.sinopse}"/>
+                            <td th:text="${filme.anoLancamento}"/>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <footer th:insert="rodape.html"></footer>
+    </body>
+</html>
