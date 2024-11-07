@@ -1,0 +1,27 @@
+#containerFilme{
+    margin:auto;
+    background-color: #595551;
+    margin-top: 10vh;
+    border-radius: 10px;
+    color:white;
+}
+
+#titulo{
+    text-align: center;
+    font-family:'inter', 'sans-serif';
+    font-size: 20px;
+    margin-top: 4%;
+}
+
+#sinopse{
+    margin-top: 4%;;
+    font-family: 'inter', 'sans-serif';
+    font-size:20px;
+}
+
+#anoLancamento{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    font-family: 'inter', 'sans-serif';
+    font-size:20px;
+}

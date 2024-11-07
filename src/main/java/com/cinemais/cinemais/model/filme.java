@@ -16,6 +16,7 @@ public class filme {
     
     public filme(int id, String titulo,String sinopse, String genero, LocalDate anoLancamento){
         this.id = id;
+        this.titulo = titulo;
         this.sinopse = sinopse;
         this.genero = genero;
         this.anoLancamento = anoLancamento;

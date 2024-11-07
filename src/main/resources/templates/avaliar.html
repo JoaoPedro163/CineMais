@@ -2,38 +2,51 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>TODO supply a title</title>
+        <title>Cinemais - Avaliar Filme</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
+
         <link rel="stylesheet" th:href="@{/css/styleAvaliar.css}"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mako&family=ADLaM+Display&display=swap" rel="stylesheet"/>
+
     </head>
     <body>
         <header th:insert="cabecalho.html"></header>
         <main>
-            <div class="container">
-                <h3>VEJA O QUE NOSSOS USUÁRIOS ANDAM ASSISTINDO E AVALIE!</h3>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Título</th>
-                            <th>Gênero</th>
-                            <th>Sinopse</th>
-                            <th>Ano de lançamento</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!--Filmes cadastrados -->
-                        <tr th:each="filme : ${listaFilmes}">
-                            <td th:text="${filme.id}"/>
-                            <td th:text="${filme.titulo}"/>
-                            <td th:text="${filme.genero}"/>
-                            <td th:text="${filme.sinopse}"/>
-                            <td th:text="${filme.anoLancamento}"/>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="container" id="containerTable">
+                <div class="col-sm-12">
+                    <h3 id="titleTabela">VEJA O QUE NOSSOS USUÁRIOS ANDAM ASSISTINDO E AVALIE!</h3>
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="tableFilmes" >
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Título</th>
+                                    <th>Gênero</th>
+                                    <th>Sinopse</th>
+                                    <th>Ano de lançamento</th>
+                                    <th>Avaliação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--Filmes cadastrados -->
+                                <tr th:each="filme : ${listaFilmes}">
+                                    <td th:text="${filme.id}"/>
+                                    <td th:text="${filme.titulo}"/>
+                                    <td th:text="${filme.genero}"/>
+                                    <td th:text="${filme.sinopse}"/>
+                                    <td th:text="${filme.anoLancamento}"/>
+                                    <td><a class="btn btn-primary btnAvaliar" data-bs-toggle="modal" data-bs-target="#modalAvaliar" th:href="@{/avaliarFilme(id = ${filme.id})}">Avaliar</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </main>
         <footer th:insert="rodape.html"></footer>

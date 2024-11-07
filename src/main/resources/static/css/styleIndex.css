@@ -1,5 +1,6 @@
 #cabecalho{
     background-color: #595551;
+    width: 100%;
 }
 
 #logo{
@@ -115,6 +116,7 @@
 #rodape{
     background-color: #595551;
     margin-top: 5%;
+    width: 100%;
 }
 
 #navRodape{
