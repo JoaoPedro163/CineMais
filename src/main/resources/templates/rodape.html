@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="htpp://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8"/>
@@ -15,15 +15,23 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <nav class="d-flex flex-column" id="navRodape">
-                            <a>Página Inicial</a>
-                            <a>Cadastrar</a>
-                            <a>Avaliar</a>
+                            <a th:href="@{/index}" class="sem-sublinhado">Página Inicial</a>
+                            <a th:href="@{/cadastrar}" class="sem-sublinhado">Cadastrar</a>
+                            <a th:href="@{/avaliar}" class="sem-sublinhado">Avaliar</a>
                         </nav>
                         <p style="color:white;"><strong>Copyright Cine+ - 2024 - Todos os direitos reservados</strong></p>
                     </div>
                     <div class="col-sm-6" id="divContatos">
                         <p>Contato: 00 00000-0000</p>
-                        <p><strong>Redes sociais: <img th:src="@{/images/facebook.jpeg}" alt="logo-facebook" class="redesSociais"/> <img th:src="@{/images/instagram.jpeg}" alt="logo-instagram" class="redesSociais"/></strong></p>
+                        <p><strong>Redes sociais: 
+                                <a href="https://www.facebook.com">
+                                    <img th:src="@{/images/facebook.jpeg}" alt="logo-facebook" class="redesSociais"/> 
+                                </a>
+                                <a href="https://www.instagram.com">
+                                    <img th:src="@{/images/instagram.jpeg}" alt="logo-instagram" class="redesSociais"/>
+                                </a>
+                            </strong>
+                        </p>
                     </div>
                 </div>
             </div>

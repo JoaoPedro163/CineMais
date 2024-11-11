@@ -23,8 +23,7 @@
                         <h3 id="title"><strong>CADASTRE SEU FILME FAVORITO PARA QUE OUTRAS PESSOAS POSSAM VÊ-LO</strong></h3>
                         <form th:action="@{/cadastrar}" method="post">
 
-                            <label for="txtId" class="form-label">ID:</label>
-                            <input type="number" id="txtId" class="form-control" th:field="${filme.id}"/>
+                            <input type="hidden" id="txtId" class="form-control" th:field="${filme.id}"/>
 
                             <label for="txtTitulo" class="form-label">Titulo:</label>
                             <input type="text" id="txtTitulo" th:field="${filme.titulo}" class="form-control"/>

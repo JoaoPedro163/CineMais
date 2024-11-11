@@ -15,20 +15,62 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mako&family=ADLaM+Display&display=swap" rel="stylesheet"/>
     </head>
     <body>
+
         <header th:insert="cabecalho.html"></header>
+
         <main>
             <div class="container" id="containerFilme">
-                
+
                 <div class="row">
                     <h2 th:utext="'<strong>' + ${filme.titulo}+'</strong>'" id="titulo"/>
                 </div>
+
                 <div class="row">
                     <p th:utext="'<strong>Sinopse: </strong>' + ${filme.sinopse}" id="sinopse"/>
                 </div>
+
                 <div class="row">
                     <p th:utext="'<strong>Ano de lançamento: </strong>' + ${filme.anoLancamento}" id="anoLancamento"/>
                 </div>
+                <h3 id="titleFormulario">VEJA O QUE NOSSOS USUÁRIOS ACHAM DESSE FILME</h3>
+                <div class="row" id="divFormulario">
+
+                    <form th:action="@{/guardar-avaliacao}" method="POST">
+                        <input type="hidden" th:value="${avaliacao.id}"/>
+
+                        <label class="form-label">Análise:</label>
+                        <textarea id="analise" rows="5" class="form-control" th:field="${avaliacao.analise}"></textarea>
+
+                        <label class="form-label">Nota:</label>
+                        <input type="number" class="form-control" th:field="${avaliacao.nota}" id="inputNota"/>
+
+                        <input type="hidden" th:value="${filme.id}" th:name="filmeId"/>
+                        <div id="divBtnAvaliar">
+                            <input type="submit" class="btn btn-success" value="Avaliar" id="btnFormAvaliar"/>
+                        </div>
+                    </form>
+                </div>
+
+                <table class="table table-responsive table-dark" id="tblAvaliar">
+
+                    <thead>
+                        <tr>
+                            <th>Análises</th>
+                            <th>Nota</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr th:each="avaliacao : ${avaliacoes}">
+                            <td th:text="${avaliacao.analise}"/>
+                            <td th:text="${avaliacao.nota}"/>
+                        </tr>
+
+                    </tbody>
+                </table>
+
             </div>
+
         </main>
         <footer th:insert="rodape.html"/>
     </body>

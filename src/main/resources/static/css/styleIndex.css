@@ -8,6 +8,11 @@
     height: 69px
 }
 
+.sem-sublinhado{
+    text-decoration: none;
+    color:white;
+}
+
 #divNavCabecalho{
     margin: auto;
 }
@@ -122,6 +127,7 @@
 #navRodape{
     margin-top:2%;
     color:white;
+    text-decoration: none;
 }
 
 #divContatos{

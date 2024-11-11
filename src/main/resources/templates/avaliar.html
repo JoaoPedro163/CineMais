@@ -41,7 +41,7 @@
                                     <td th:text="${filme.genero}"/>
                                     <td th:text="${filme.sinopse}"/>
                                     <td th:text="${filme.anoLancamento}"/>
-                                    <td><a class="btn btn-primary btnAvaliar" data-bs-toggle="modal" data-bs-target="#modalAvaliar" th:href="@{/avaliarFilme(id = ${filme.id})}">Avaliar</a></td>
+                                    <td><a class="btn btn-primary btnAvaliar" th:href="@{/avaliarFilme(id = ${filme.id})}">Avaliar</a></td>
                                 </tr>
                             </tbody>
                         </table>

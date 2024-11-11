@@ -25,3 +25,32 @@
     font-family: 'inter', 'sans-serif';
     font-size:20px;
 }
+
+#divFormulario{
+    width: 50%;
+    margin:auto;
+}
+
+#inputNota{
+    width: 20%;
+}
+
+#titleFormulario{
+    text-align: center;
+    font-family: 'inter', 'sans-serif';
+}
+
+#divBtnAvaliar{
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#btnFormAvaliar{
+    width: 40%;
+}
+
+#tblAvaliar{
+    width:70%;
+    margin:auto;
+}
