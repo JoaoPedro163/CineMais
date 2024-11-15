@@ -1,52 +1,33 @@
 package com.cinemais.cinemais.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Size;
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name = "avaliacao")
 public class Avaliacao {
-    private int id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
     private String analise;
+
+    @Min(value = 0, message = "A nota mínima é 0")
+    @Max(value = 10, message = "A nota máxima é 10")
     private int nota;
+
+    @ManyToOne
+    @JoinColumn(name = "filme_id")
     private filme filme;
-    
-    public Avaliacao(){
-    }
-    
-    public Avaliacao(int id,filme filme ,String analise, int nota){
-        this.id = id;
-        this.analise = analise;
-        this.nota = nota;
-        this.filme = filme;
-    }
 
-    public filme getFilme() {
-        return filme;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getAnalise() {
-        return analise;
-    }
-
-    public int getNota() {
-        return nota;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setAnalise(String analise) {
-        this.analise = analise;
-    }
-
-    public void setFilme(filme filme) {
-        this.filme = filme;
-    }
-
-    public void setNota(int nota) {
-        this.nota = nota;
-    }
-    
-    
 }
