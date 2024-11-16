@@ -2,10 +2,12 @@ package com.cinemais.cinemais.controller;
 
 import com.cinemais.cinemais.model.Avaliacao;
 import com.cinemais.cinemais.model.filme;
+import com.cinemais.cinemais.service.FilmesService;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +20,10 @@ public class cinemaisController {
 
     private List<filme> listaFilmes = new ArrayList<>();
     private List<Avaliacao> listaAvaliacoes = new ArrayList<>();
-
+    @Autowired
+    private FilmesService filmeService;
+    
+    
     @GetMapping("/index")
     public String exibirIndex() {
         return "index";
@@ -40,7 +45,7 @@ public class cinemaisController {
 
     @GetMapping("/avaliar")
     public String exibirAvaliar(Model model) {
-        model.addAttribute("listaFilmes", listaFilmes);
+        model.addAttribute("listaFilmes", filmeService.listarTodosFilmes());
         return "avaliar";
     }
 

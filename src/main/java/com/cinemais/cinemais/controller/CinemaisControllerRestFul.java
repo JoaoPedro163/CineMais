@@ -36,35 +36,35 @@ public class CinemaisControllerRestFul {
     }
 
     //Listar filmes pelo ID
-    @GetMapping("/buscar/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<filme> getFilmeId(@PathVariable Integer id) {
         filme f = filmeService.getFilmeId(id);
         return new ResponseEntity<>(f, HttpStatus.OK);
     }
 
     //Cadastrar filme
-    @PostMapping("/cadastrar")
+    @PostMapping("")
     public ResponseEntity<filme> adicionarFilme(@RequestBody filme filme) {
         var filmeNovo = filmeService.criarFilme(filme);
         return new ResponseEntity<>(filmeNovo, HttpStatus.CREATED);
     }
 
     //Listar filme que contenham a variavel titulo
-    @GetMapping("/listar/{titulo}")
+    @GetMapping("/{titulo}")
     public ResponseEntity<List<filme>> getFilmesTitulo(@PathVariable String titulo) {
         List<filme> listaFilmes = filmeService.listarFilmesTitulo(titulo);
         return new ResponseEntity<>(listaFilmes, HttpStatus.OK);
     }
 
     //Alterar dados do filme já cadastrado
-    @PutMapping("/alterar/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<filme> alterarFilme(@PathVariable Integer id, @RequestBody filme filmeAtualizado) {
         filme f = filmeService.atualizarFilme(filmeAtualizado, id);
         return new ResponseEntity<>(f, HttpStatus.OK);
     }
 
     //Excluir filmes de acordo com o ID passado
-    @DeleteMapping("/excluir/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity deletarFilme(@PathVariable Integer id) {
         filmeService.deletarFilme(id);
         return new ResponseEntity<>(HttpStatus.OK);
@@ -73,42 +73,42 @@ public class CinemaisControllerRestFul {
     //Daqui para baixo são requisições das Avaliações
 
     //Listar todas as avaliações
-    @GetMapping("/avaliacao/listar")
+    @GetMapping("/avaliacao")
     public ResponseEntity<List> listarAvaliacoes() {
         List<Avaliacao> listaAvaliacoes = avaliacaoService.getAllFilmes();
         return new ResponseEntity<>(listaAvaliacoes, HttpStatus.OK);
     }
 
     //Listar avaliação com o Id correspondente
-    @GetMapping("/avaliacao/listar/{id}")
+    @GetMapping("/avaliacao/{id}")
     public ResponseEntity<Avaliacao> listarAvaliacaoId(@PathVariable Integer id) {
         Avaliacao aval = avaliacaoService.getAvaliacaoId(id);
         return new ResponseEntity<>(aval, HttpStatus.OK);
     }
 
     //Adiciona avaliação
-    @PostMapping("/avaliacao/adicionar")
+    @PostMapping("/avaliacao")
     public ResponseEntity<Avaliacao> criarAvaliacao(@RequestBody Avaliacao avaliacao) {
         var aval = avaliacaoService.addAvaliacao(avaliacao);
         return new ResponseEntity<>(aval, HttpStatus.CREATED);
     }
 
     //Lista avaliações que contenha a variavel titulo
-    @GetMapping("/avaliacao/buscar/{titulo}")
+    @GetMapping("/avaliacao/{titulo}")
     public ResponseEntity<List<Avaliacao>> listarAvaliacaoTitulo(@PathVariable String titulo) {
         List<Avaliacao> listaAvaliacoes = avaliacaoService.getFilmeTitulo(titulo);
         return new ResponseEntity<>(listaAvaliacoes, HttpStatus.OK);
     }
 
     //Edita a avaliação do ID correspondente
-    @PutMapping("/avaliacao/alterarAvaliacao/{id}")
+    @PutMapping("/avaliacao/{id}")
     public ResponseEntity<Avaliacao> updateAvaliacao(@PathVariable Integer id, @RequestBody Avaliacao avaliacaoAtualizada) {
         Avaliacao aval = avaliacaoService.updateAvaliacao(id, avaliacaoAtualizada);
         return new ResponseEntity<>(aval, HttpStatus.OK);
     }
 
     //Exclui a avaliação do ID correspondente
-    @DeleteMapping("/avaliacao/excluir/{id}")
+    @DeleteMapping("/avaliacao/{id}")
     public ResponseEntity excluirAvaliacao(@PathVariable Integer id) {
         avaliacaoService.deletarAvaliacao(id);
         return new ResponseEntity<>(HttpStatus.OK);
